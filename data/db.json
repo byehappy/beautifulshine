@@ -1,0 +1,132 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "первое кольцо",
+      "price": "12 990p.",
+      "imageName": "productone",
+      "date": "2023-12-07T12:31:28.000Z",
+      "inStock": true,
+      "brand": "Elegant Jewelry",
+      "collection": "Classic Collection",
+      "model": "Elegance 500",
+      "material": "Серебро 925 пробы",
+      "weight": "5 г",
+      "country": "Италия",
+      "quantity": "1"
+    },
+    {
+      "id": 2,
+      "name": "второе кольцо",
+      "price": "15 990p.",
+      "imageName": "producttwo",
+      "date": "2023-12-06T12:31:28.000Z",
+      "inStock": true,
+      "brand": "Luxury Rings",
+      "collection": "Modern Chic",
+      "model": "Sleek Design",
+      "material": "Золото 750 пробы",
+      "weight": "8 г",
+      "country": "Франция",
+      "quantity": "3"
+    },
+    {
+      "id": 3,
+      "name": "третье кольцо",
+      "price": "10 490p.",
+      "imageName": "productthree",
+      "date": "2023-12-05T12:31:28.000Z",
+      "inStock": true,
+      "brand": "Timeless Jewelry",
+      "collection": "Vintage Vibes",
+      "model": "Classic Elegance",
+      "material": "Розовое золото 585 пробы",
+      "weight": "6 г",
+      "country": "США",
+      "quantity": "2"
+    },
+    {
+      "id": 4,
+      "name": "четвёртое кольцо",
+      "price": "34 990p.",
+      "imageName": "productfour",
+      "date": "2024-12-04T12:31:28.000Z",
+      "inStock": true,
+      "brand": "Royal Jewels",
+      "collection": "Exquisite Majesty",
+      "model": "Regal Beauty",
+      "material": "Белое золото 18K",
+      "weight": "10 г",
+      "country": "Великобритания",
+      "quantity": "5"
+    },
+    {
+      "id": 5,
+      "name": "error product",
+      "price": "99 990p.",
+      "imageName": "error",
+      "date": "2023-12-09T00:04:30.000Z",
+      "inStock": false,
+      "brand": "Undefined",
+      "collection": "N/A",
+      "model": "N/A",
+      "material": "N/A",
+      "weight": "N/A",
+      "country": "N/A",
+      "quantity": "999"
+    }
+  ],
+  "user": [
+    {
+      "name": "Евгений",
+      "surname": "фыв",
+      "patronymic": "фыв",
+      "login": "asd",
+      "email": "example@mail.ru",
+      "password": "qweqwe",
+      "password_repeat": "qweqwe",
+      "rules": true,
+      "id": 1,
+      "admin": true
+    },
+    {
+      "name": "фывфыв",
+      "surname": "фывфыв",
+      "patronymic": "фывфыв",
+      "login": "asda",
+      "email": "example@mail.ru",
+      "password": "qweqwe",
+      "password_repeat": "qweqwe",
+      "rules": true,
+      "id": 2,
+      "admin": false
+    },
+    {
+      "name": "йцуфыв",
+      "surname": "йцу",
+      "patronymic": "йцу",
+      "login": "qwe",
+      "email": "example@mail.ru",
+      "password": "qweqwe",
+      "password_repeat": "qweqwe",
+      "rules": true,
+      "admin": false,
+      "id": 3
+    },
+    {
+      "name": "Евгений",
+      "surname": "Разживалов",
+      "patronymic": "Вадимович",
+      "login": "stopapypa",
+      "email": "example@mail.ru",
+      "password": "qweasd",
+      "password_repeat": "qweasd",
+      "rules": true,
+      "admin": false,
+      "id": 4
+    }
+  ],
+  "order":[
+    
+  ]
+}
