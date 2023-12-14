@@ -126,7 +126,88 @@
       "id": 4
     }
   ],
-  "order":[
-    
+  "order": [
+    {
+      "products": [
+        {
+          "id": 4,
+          "name": "четвёртое кольцо",
+          "price": "34 990p.",
+          "imageName": "productfour",
+          "date": "2024-12-04T12:31:28.000Z",
+          "inStock": true,
+          "brand": "Royal Jewels",
+          "collection": "Exquisite Majesty",
+          "model": "Regal Beauty",
+          "material": "Белое золото 18K",
+          "weight": "10 г",
+          "country": "Великобритания",
+          "quantity": "5",
+          "quantityInOrder": 1
+        },
+        {
+          "id": 3,
+          "name": "третье кольцо",
+          "price": "10 490p.",
+          "imageName": "productthree",
+          "date": "2023-12-05T12:31:28.000Z",
+          "inStock": true,
+          "brand": "Timeless Jewelry",
+          "collection": "Vintage Vibes",
+          "model": "Classic Elegance",
+          "material": "Розовое золото 585 пробы",
+          "weight": "6 г",
+          "country": "США",
+          "quantity": "2",
+          "quantityInOrder": 1
+        },
+        {
+          "id": 2,
+          "name": "второе кольцо",
+          "price": "15 990p.",
+          "imageName": "producttwo",
+          "date": "2023-12-06T12:31:28.000Z",
+          "inStock": true,
+          "brand": "Luxury Rings",
+          "collection": "Modern Chic",
+          "model": "Sleek Design",
+          "material": "Золото 750 пробы",
+          "weight": "8 г",
+          "country": "Франция",
+          "quantity": "3",
+          "quantityInOrder": 1
+        }
+      ],
+      "totalPrice": 61470,
+      "user_id": 1,
+      "status": "в процессе",
+      "date": "2023-12-14T20:30:13.923Z",
+      "id": 1
+    },
+    {
+      "products": [
+        {
+          "id": 4,
+          "name": "четвёртое кольцо",
+          "price": "34 990p.",
+          "imageName": "productfour",
+          "date": "2024-12-04T12:31:28.000Z",
+          "inStock": true,
+          "brand": "Royal Jewels",
+          "collection": "Exquisite Majesty",
+          "model": "Regal Beauty",
+          "material": "Белое золото 18K",
+          "weight": "10 г",
+          "country": "Великобритания",
+          "quantity": "5",
+          "quantityInOrder": 5
+        }
+      ],
+      "totalPrice": 174950,
+      "user_id": 1,
+      "status": "в процессе",
+      "date": "2023-12-14T20:30:34.995Z",
+      "id": 3
+    }
   ]
 }

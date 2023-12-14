@@ -1,9 +1,9 @@
 export default interface ProductData {
-  id:string
+  id:number;
   imageName:string
   name:string
-  price:number
-  date:Date
+  price:string
+  date:string
   inStock:boolean
   brand: string
   collection: string
@@ -15,6 +15,20 @@ export default interface ProductData {
 }
 
 export default interface OrderProductData{
-  produtct:ProductData
+  products:ProductData[]
   quantityInOrder:number
+}
+
+type ProductOrder = {
+  product:ProductData
+  quantityInOrder:number
+}
+
+export default interface Order{
+  product:ProductOrder[]
+  date:string
+  totalPrice:number
+  user_id:number
+  status:string
+  id:number
 }

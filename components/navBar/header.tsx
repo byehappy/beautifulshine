@@ -19,7 +19,7 @@ export default function Header() {
     <HeaderContainer>
       <div style={{ gap: "2vw", display: "flex", alignItems: "center" }}>
         <Link href={"/"}>
-          <Image src="/images/logo.png" width={50} height={50} alt={"logo"} />{" "}
+          <Image src="/images/logo.png" width={50} height={50} alt={"logo"} />
         </Link>
         <Link href="/">Beautiful Shine</Link>
         <Link href="/pages/catalog">Каталог</Link>
@@ -34,15 +34,17 @@ export default function Header() {
             <button onClick={() => signOut()}>Выйти</button>
           </>
         )}{" "}
-        {(session.status === "unauthenticated" ||
-          session.status === "loading") && (
+        {(session.status === "unauthenticated") && (
           <>
             <Link href="/pages/auth/registration">Регистрация</Link>
             <Link href="/pages/auth/login">Авторизация</Link>
           </>
         )}
+        {(session.status === "loading") && (
+          <>Проверка авторизации</>
+        )}
         <Link href={"/pages/cart"}>
-          <Image src="/icons/cart.png" alt="cart" width={35} height={35} />{" "}
+          <Image src="/icons/cart.png" alt="cart" width={35} height={35} />
         </Link>
       </div>
     </HeaderContainer>

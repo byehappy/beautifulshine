@@ -11,22 +11,23 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { ConfirmOrder } from "@/utils/order";
 
-const OrderConfirmationModal: FC<{ onClose: () => void }> = ({ onClose },products:OrderProductData) => {
+const OrderConfirmationModal: FC<{ onClose: () => void,products:OrderProductData[] }> = ({ onClose,products }) => {
+  const router = useRouter();
   const [password, setPassword] = useState<string>("");
   const [errorPassword,setErrorPassword] = useState<string>();
   const session = useSession();
   if(session.data == null){
     return <div style={{color:"red",fontWeight:'650'}}>Что бы оформить заказ необходимо быть авторизованным пользователем</div>
   }
-
+  
   const correctPassword =  session.data.user.password;
   
-
   const handleConfirmOrder = () => {
     if (password === correctPassword) {
       ConfirmOrder(products,session.data.user)
       Cookies.remove('cart')
       onClose();
+      router.push('/');
     } else {
       setErrorPassword('Неправильный пароль')
     }
@@ -60,12 +61,11 @@ const Cart: FC = () => {
   const [removeTrigger, setRemoveTrigger] = useState<number>(0);
   const [isOrderConfirmationModalOpen, setIsOrderConfirmationModalOpen] =
     useState<boolean>(false);
-    const router = useRouter();
-  const handleRemove = (productId: string) => {
+  const handleRemove = (productId: number) => {
     const existingCart = JSON.parse(Cookies.get("cart") || "[]");
 
     const updatedCart = existingCart.filter(
-      (item: string) => item !== productId
+      (item: number) => item !== productId
     );
 
     Cookies.set("cart", JSON.stringify(updatedCart));
@@ -77,8 +77,6 @@ const Cart: FC = () => {
 
   const handleCloseOrderConfirmationModal = () => {
     setIsOrderConfirmationModalOpen(false);
-    Cookies.remove("cart");
-    router.push('/');
   };
   useEffect(() => {
     const fetchProducts = async () => {
@@ -109,7 +107,7 @@ const Cart: FC = () => {
         <ButtonOutline style={{margin:'2vw 0'}} onClick={handleOpenOrderConfirmationModal}>Оформить заказ</ButtonOutline>
       )}
       {isOrderConfirmationModalOpen && (
-        <OrderConfirmationModal onClose={handleCloseOrderConfirmationModal} {...products}/>
+        <OrderConfirmationModal onClose={handleCloseOrderConfirmationModal} products={products}/>
       )}
     </div>
   );
