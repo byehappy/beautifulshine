@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from 'react';
 import { getOrders, deleteOrder } from '@/utils/order'; 
 import OrderList from '@/components/order/orderList';
-import Order from '@/interfaces/product'
 import { useRouter } from 'next/navigation';
 import { useSession } from "next-auth/react";
+import Order from '@/interfaces/product'
 
 export default function Dashboard ({params}:{params:{id:number}}) {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -15,7 +15,6 @@ export default function Dashboard ({params}:{params:{id:number}}) {
     required:true,
     onUnauthenticated() {
       route.push('/pages/auth/login')
-      
     },
   });
   
@@ -25,10 +24,10 @@ export default function Dashboard ({params}:{params:{id:number}}) {
       setOrders(ordersData);
     };
     setTraker(traker++)
-    console.log(traker)
+
     fetchOrders();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [traker]);
+  }, [traker,route]);
 
   const handleDeleteOrder = async (orderId: number) => {
     await deleteOrder(orderId,params.id); 

@@ -14,6 +14,7 @@ declare module "next-auth" {
       password_repeat:string,
       rules: boolean,
       id: number
+      admin:boolean
     }
   }
 }

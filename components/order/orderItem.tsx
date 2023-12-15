@@ -21,6 +21,9 @@ const OrderItem: React.FC<OrderItemProps> = ({ order, onDelete }) => {
         </ul>
       </p>
       <p>Статус: {order.status} </p>
+      {order.reasonCancel && (
+        <p style={{ color: 'red' }}>Причина отмены заказа: {order.reasonCancel}</p>
+      )}
       <p>Сумма заказа: {order.totalPrice} р.</p>
       <button style={{width:'10vw',height:'1.5vw',color:'red',background:'none',cursor:'pointer'}} onClick={onDelete}>Delete Order</button>
     </div>

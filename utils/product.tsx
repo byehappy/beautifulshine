@@ -20,7 +20,7 @@ export function addToFavorites(product: ProductData) {
   const existingFavorites = JSON.parse(Cookies.get("favorites") || "[]");
 
   const isProductInFavorites = existingFavorites.some(
-    (item: { id: string }) => item.id === product.id
+    (item: { id: number }) => item.id === product.id
   );
 
   if (!isProductInFavorites) {

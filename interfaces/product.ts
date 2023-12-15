@@ -1,5 +1,6 @@
 export default interface ProductData {
   id:number;
+  category_id:number;
   imageName:string
   name:string
   price:string
@@ -30,5 +31,6 @@ export default interface Order{
   totalPrice:number
   user_id:number
   status:string
+  reasonCancel:string
   id:number
 }

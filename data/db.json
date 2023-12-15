@@ -2,6 +2,7 @@
   "product": [
     {
       "id": 1,
+      "category_id": 1,
       "name": "первое кольцо",
       "price": "12 990p.",
       "imageName": "productone",
@@ -17,6 +18,7 @@
     },
     {
       "id": 2,
+      "category_id": 1,
       "name": "второе кольцо",
       "price": "15 990p.",
       "imageName": "producttwo",
@@ -32,6 +34,7 @@
     },
     {
       "id": 3,
+      "category_id": 1,
       "name": "третье кольцо",
       "price": "10 490p.",
       "imageName": "productthree",
@@ -47,6 +50,7 @@
     },
     {
       "id": 4,
+      "category_id": 1,
       "name": "четвёртое кольцо",
       "price": "34 990p.",
       "imageName": "productfour",
@@ -62,6 +66,7 @@
     },
     {
       "id": 5,
+      "category_id": 1,
       "name": "error product",
       "price": "99 990p.",
       "imageName": "error",
@@ -74,6 +79,21 @@
       "weight": "N/A",
       "country": "N/A",
       "quantity": "999"
+    },
+    {
+      "inStock": true,
+      "category_id": 2,
+      "name": "test",
+      "price": "123 333р.",
+      "date": "2023-12-15",
+      "brand": "test",
+      "collection": "test",
+      "model": "test",
+      "material": "test",
+      "weight": "test",
+      "country": "test",
+      "quantity": "2",
+      "id": 6
     }
   ],
   "user": [
@@ -180,8 +200,9 @@
       ],
       "totalPrice": 61470,
       "user_id": 1,
-      "status": "в процессе",
+      "status": "отменён",
       "date": "2023-12-14T20:30:13.923Z",
+      "reasonCancel": "у вас нет денег)",
       "id": 1
     },
     {
@@ -205,8 +226,26 @@
       ],
       "totalPrice": 174950,
       "user_id": 1,
-      "status": "в процессе",
+      "status": "Новый (в обработке)",
       "date": "2023-12-14T20:30:34.995Z",
+      "reasonCancel": "",
+      "id": 3
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "золотые кольца",
+      "imageUrl": "https://images.unsplash.com/photo-1509119546138-bccc862c68de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "test",
+      "imageUrl": "https://images.unsplash.com/photo-1565206077212-4eb48d41f54b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 2
+    },
+    {
+      "name": "test2",
+      "imageUrl": "https://images.unsplash.com/photo-1605089315599-ca966e96b56a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": 3
     }
   ]

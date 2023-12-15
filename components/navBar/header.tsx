@@ -30,10 +30,13 @@ export default function Header() {
           <>
             <Link href={`/pages/dashboard/${session.data.user.id}`}>
               Привет {session.data?.user?.name}
-            </Link>{" "}
+            </Link>
             <button onClick={() => signOut()}>Выйти</button>
+            {session.data.user.admin === true && (
+              <Link href={'/pages/admin'}>Админ панель</Link>
+            )}
           </>
-        )}{" "}
+        )}
         {(session.status === "unauthenticated") && (
           <>
             <Link href="/pages/auth/registration">Регистрация</Link>
