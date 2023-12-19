@@ -23,7 +23,7 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ data, categories }) => {
   const [sortedData, setSortedData] = useState<ProductData[]>(data);
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
-  console.log(data,categories)
+  
   const sortBy = (key: keyof ProductData) => {
     const sorted = [...sortedData].sort((a, b) => {
       if (key === 'date') {

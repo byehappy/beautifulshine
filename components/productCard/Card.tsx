@@ -59,10 +59,10 @@ export default function CardProduct(props: ProductData) {
           margin: "1vw auto",
           display: "flex",
           gap: ".5vw",
+          justifyContent:'center'
         }}
       >
         <Buy style={{ width: "10vw" }}onClick={()=>addToCart(props)}>Купить</Buy>
-        <Buy style={{ width: "5vw" }} onClick={()=>addToFavorites(props)}>В избранное</Buy>
       </div>
     </Container>
   );

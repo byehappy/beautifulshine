@@ -32,7 +32,7 @@ const LoginForm = () => {
             });
             
             if (response?.error) {
-              setServerError(response.error);
+              setServerError('Неправильный логин или пароль');
             } else {
               setServerError("");
             }
