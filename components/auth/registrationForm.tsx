@@ -57,7 +57,7 @@ const RegistraionForm = () => {
             .oneOf([Yup.ref("password")], "* Пароли должны совпадать"),
           rules: Yup.boolean().required(
             "* Правила регистрации должны быть приняты"
-          ),
+          ).oneOf([true],"* Правила регистрации должны быть приняты"),
         })}
         onSubmit={async (values) => {
           setServerError('')
